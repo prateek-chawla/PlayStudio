@@ -1,0 +1,541 @@
+body{
+    background-color: rgb(40,40,40);
+    color: cornsilk;
+    font-size: 16px;
+    font-family: 'Roboto',serif;
+    margin:0;
+    
+}
+
+
+/* Header */
+
+header{
+    background-color: rgb(80,80,80);
+    height: 5rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+      
+}
+
+/* Left Side of Tray */
+.logo{   
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    width: 25%; 
+}
+
+
+.logo i{
+    font-size: 1.8rem;
+    display: flex;
+    position: relative;
+}
+
+
+.logo i::after{    
+    content: '';        
+    position:absolute;   
+    border: 0.2rem solid;   
+    border-color: cornsilk  rgb(80,80,80)  cornsilk  rgb(80,80,80);
+    border-radius: 50%;
+    height: 2.8rem;
+    width: 2.8rem;      
+    left: -40%;
+    top: -25%;
+    animation: spin 1.7s linear infinite;      
+}
+
+.logo span{
+    font-size: 2rem;
+    font-family: 'Baloo Thambi 2';
+    display: flex;
+    margin-left: 1rem;    
+}
+
+
+/* Right Side of Tray */
+
+.tray{    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;     
+    flex-wrap: wrap;
+}
+
+.right-tray{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    transition: all 1.2s;
+    flex-wrap: wrap;
+    
+}
+
+
+.notifications i{
+    display: flex;
+    border-radius: 50%;
+    color: rgb(80,80,80);
+    background-color: cornsilk;
+    font-size: 1.4rem;
+    padding: 0.7rem;
+    align-items:center;
+    
+}
+
+.user img{
+    display: flex;
+    border-radius: 50%;
+    color: rgb(80,80,80);
+    background-color: cornsilk;    
+    height: 2.6rem;
+    width: 2.6rem;
+    align-items:center;
+    
+}
+
+.user img:hover , .notifications i:hover{
+    box-shadow: 0px 0px 6px cornsilk;
+    opacity: 0.7;
+}
+
+/* Search Bar */
+
+.search-panel{
+    display: flex;
+    width: 70%;
+    flex-direction: row-reverse;
+}
+
+.search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10%; 
+    transition: all 0.6s ease-in-out;
+}
+
+.search-icon{
+    display: flex;
+    font-size: 1.4rem;
+    color: rgb(80,80,80);
+    background-color: cornsilk;
+    padding: 0.7rem;
+    border-radius: 50%;
+    align-items:center;
+}
+
+
+.search-bar{
+    display: none;
+    border: none;
+    background-color:cornsilk;
+    color:rgb(80,80,80);
+    width: 90%;
+    height: 2.6rem;
+    border-radius: 4rem;
+    transition: all 0.8s ease-in-out;   
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+.search:hover{
+    width: 100%;   
+}
+
+.search:hover  .search-bar{
+    display: flex;    
+    transform: translate(13%);  
+    box-shadow: 2px 2px 6px rgb(150,150,150);
+}
+
+.search:hover .search-icon{
+    background-color: rgb(80,80,80);
+    color: rgb(80,80,80);
+}
+
+.search:hover .search-bar::placeholder{
+    color: lightgray;
+    font-family: 'Baloo 2';
+    font-size: 1.1rem;
+}
+
+/* --- End Header --- */
+
+/* Main */
+
+main{
+    display: flex;    
+    justify-content: space-between;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-around;
+	align-items: center;
+    width: 65%;
+    margin-top: 3rem;
+}
+
+/*  Carousel  */
+
+.carousel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.charts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    opacity: 0.9;
+    flex-wrap: wrap; 
+}
+
+.charts li{
+    position: relative;
+}
+
+.charts li img{
+    display: flex;
+    height: 6rem;    
+    border-radius: 0.3rem;
+}
+
+.side-carousel-img{
+    height: 10rem !important;    
+}
+
+ .center-carousel-img{
+    height: 13rem !important;    
+} 
+
+.mid-btn{
+    background-color:transparent;
+    color: cornsilk;
+    display: inline-block;
+    font-size: 0.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+ 
+.charts li:hover .mid-btn{
+    opacity: 1;
+    font-size: 2rem;
+    transition: all 0.5s ease;
+}
+
+.charts li:hover img{
+    opacity: 0.7;
+    box-shadow: 0px 0px 6px cornsilk;
+    transform: translateY(-3%);
+    filter: grayscale(30%);
+}
+
+/* End Carousel */
+
+/* Stations */
+.stations{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    margin-left: 4rem;
+    background-color:rgb(80,80,80);
+    height:20vh;
+    flex-wrap: wrap;
+    border-radius: 3rem;
+
+}
+
+.station-fig{
+    position: relative;
+    overflow: hidden;
+}
+.station-fig img{
+    height: 6.2rem;
+    width: 6.2rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px rgb(211,208,203)(43,45,81);
+}
+
+.station-fig span{
+    position: absolute;
+    opacity: 0;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Baloo Thambi 2';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay{
+    height: 6.2rem;
+    width: 6.2rem;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    background-color: black;
+    box-shadow: 0px 0px 4px black;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.3s ease;
+}
+
+
+
+.station-fig:hover .overlay{
+    opacity: 0.4;
+    top: 50%;
+}
+
+.station-fig:hover span{
+  opacity: 1;
+}
+
+.station-fig:hover img{
+    transform: translateY(2%);
+}
+
+/* Artists */
+.artists{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95%;
+    margin-left: 4rem;
+    height:40vh;
+    flex-wrap: wrap;
+    font-family: 'Baloo 2';
+}
+
+.section-title{
+    font-size: 1.5rem;
+    font-family: 'Baloo 2';
+    flex-wrap: wrap;
+}
+.section-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;    
+}
+
+.artist-fig img{
+    height: 9.5rem;
+    width: 9.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px cornsilk;
+}
+
+.artist-fig img:hover{
+    
+    box-shadow: 0px 0px 8px rgb(211,208,203);
+}
+.artist-fig{
+    position: relative;
+}
+
+.artist-fig span{
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Baloo Thambi 2';
+    top: 115%;
+    left: 50%;
+    width: 75%;
+    height: 10%;
+    background-color: rgb(80,80,80);
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transform: translate(-50%,-50%);
+}
+
+
+/* New Releases */
+
+.new-releases{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-left: 4rem;
+    height:50vh;
+    flex-wrap: wrap;
+}
+
+.song-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4rem;
+    background-color: rgb(80,80,80);
+    width:10rem;
+    height: 14rem;
+    box-shadow: 0px 0px 1px cornsilk;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.song-img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 0.4rem;
+}
+.song-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.song-desc .mid-btn{
+    top:35%;
+    left:50%;
+    font-size: 1.8rem;
+    
+}
+
+.song-title{
+    font-family: 'Baloo Thambi 2';
+    font-size: 1.1rem;
+    color: cornsilk;
+    font-weight: 600;
+}
+
+.song-info{
+    font-family: 'Baloo 2';
+    font-size: 0.8rem;
+    color: cornsilk;
+    font-weight: 400;
+}
+
+.song-card:hover{
+    opacity: 0.7;
+    box-shadow: 0px 0px 5px cornsilk;
+    transform: scale(1.05) translateY(-2%);
+    
+}
+
+.song-card:hover .song-img{
+    opacity: 0.5;
+}
+.song-card:hover .mid-btn{
+    opacity: 1;
+    font-size: 2rem;
+    transition: all 0.5s ease;
+}
+
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    
+    
+    
+}
+
+.queue{
+    display: flex;
+	flex-direction: column;	
+	align-items: flex-start;
+    width: 100%;
+    justify-content: space-around;
+    
+    
+}
+
+.queue-ele{
+    display: flex;
+    width: 85%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3.7rem;  
+    text-align: center;
+    border-radius: 1rem;    
+}
+
+.queue-sno{
+    font-size: 0.6rem; 
+    margin-left: 0.2rem;   
+}
+
+.queue-song-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;   
+    font-size: 1rem;
+    font-family: 'Baloo 2';
+    margin-left: 1rem;
+}
+
+.queue-img img {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    margin: 0 0.7rem 0 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.queue-header{
+    display: flex;
+    font-size: 2rem;
+    font-family: 'Baloo Thambi 2';
+    margin: 3rem 0 1rem 0;
+    width: 50%;
+    justify-content: center;
+}
+
+.queue-ele i{
+    display: flex;
+    align-items: center;
+    flex-direction: flex-start;
+    width: 15%;
+}
+
+.queue-ele:nth-child(odd){
+    background-color: rgb(80,80,80);
+}
+
+.queue-ele:hover{
+    border: 2px solid rgb(211,208,203);
+    background-color: rgb(211,208,203);
+    color: black;
+}
+
+/* Animations */
+@keyframes spin{
+    from{
+        transform: translate(-10.35%,-6%) rotate(0deg);
+    }
+    to{
+        transform: translate(-10.35%,-6%) rotate(360deg);
+    }
+}
+
