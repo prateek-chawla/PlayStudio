@@ -396,7 +396,6 @@ main{
     box-shadow: 0px 0px 1px cornsilk;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .song-img{
@@ -404,6 +403,7 @@ main{
     width: 8rem;
     border-radius: 0.4rem;
 }
+
 .song-desc{
     display: flex;
     flex-direction: column;
@@ -414,8 +414,7 @@ main{
 .song-desc .mid-btn{
     top:35%;
     left:50%;
-    font-size: 1.8rem;
-    
+    font-size: 1.8rem;    
 }
 
 .song-title{
@@ -435,13 +434,13 @@ main{
 .song-card:hover{
     opacity: 0.7;
     box-shadow: 0px 0px 5px cornsilk;
-    transform: scale(1.05) translateY(-2%);
-    
+    transform: scale(1.05) translateY(-2%);    
 }
 
 .song-card:hover .song-img{
     opacity: 0.5;
 }
+
 .song-card:hover .mid-btn{
     opacity: 1;
     font-size: 2rem;
@@ -449,13 +448,12 @@ main{
 }
 
 
+/* Queue */
+
 aside{
     display: flex;
     flex-direction: column;
-    width: 27%;
-    
-    
-    
+    width: 27%;   
 }
 
 .queue{
@@ -464,9 +462,9 @@ aside{
 	align-items: flex-start;
     width: 100%;
     justify-content: space-around;
-    
-    
 }
+
+/* Queue entries */
 
 .queue-ele{
     display: flex;
@@ -527,6 +525,126 @@ aside{
     border: 2px solid rgb(211,208,203);
     background-color: rgb(211,208,203);
     color: black;
+}
+
+/* End Queue */
+
+
+/* Bottom Music Player */
+
+.player{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(30,30,30);
+    width:100%;
+    height: 12vh;
+    margin-top: 3rem;
+    
+}
+
+/* Left Side of Player */
+
+.player-song{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+}
+
+.player-song-img img{
+    height:3.2rem;
+    width:3.2rem;
+    display: flex;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(80,80,80);
+    align-items: center;
+}
+.player-song-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.player-song-info-name{
+    display: flex;
+    font-family: 'Baloo Thambi 2';
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.player-song-info-artist{
+    display: flex;
+    font-family: 'Baloo 2';
+    font-size: 0.9rem;
+    color: rgb(150,150,150);
+    line-height: 0.8;
+}
+
+/* Progress Bar Controller*/
+
+.controller{
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 10vh;
+    margin-top: 0.5rem;
+}
+
+.progress-bar{
+    display: flex;
+    border: 1px solid rgb(70,70,67);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+    padding: 0.1rem;
+}
+
+.color-progress-bar{
+    display: flex;
+    border-radius: 0.5rem;
+    background: repeating-linear-gradient(-45deg ,rgb(100,100,100) 10px 30px, grey 30px 50px);    
+    width:75%;    
+}
+
+/* Play/Next Buttons */
+
+.controller-opt{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+
+.controller-opt i{
+    font-size: 1rem;
+    color: rgb(80,80,80);
+    margin: 0 1rem;
+}
+
+.controller-opt i:hover{
+    font-size: 0.9rem;
+    color: rgb(100,100,100);
+    color: grey;
+}
+
+/* Shuffle Repeat Buttons */
+
+.player-options{
+    width: 15%;
+    font-size: 1.2rem;
+    color: rgb(80,80,80);
+}
+
+.player-options i{
+    margin: 0 0.8rem;
+}
+
+.player-options i:hover{
+    font-size: 1.3rem;
+    color: rgb(100,100,100);
+    color: grey;
 }
 
 /* Animations */
