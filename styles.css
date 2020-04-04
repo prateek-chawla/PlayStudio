@@ -168,6 +168,12 @@ header{
     font-size: 1.1rem;
 }
 
+.search input{
+    padding-left: 1rem;
+    font-family: 'Baloo 2';
+    font-size: 0.9rem;
+}
+
 /* --- End Header --- */
 
 /* Main */
