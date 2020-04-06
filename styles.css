@@ -1,27 +1,24 @@
 body{
     background-color: rgb(40,40,40);
     color: cornsilk;
-    font-size: 16px;
     font-family: 'Roboto',serif;
-    margin:0;
-    
+    margin:0;    
 }
-
 
 /* Header */
 
 header{
     background-color: rgb(80,80,80);
-    height: 5rem;
+    height: auto;
+    padding: 0.8rem 0;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    
-      
 }
 
 /* Left Side of Tray */
+
 .logo{   
     display: flex;
     align-items: center;    
@@ -29,6 +26,7 @@ header{
     width: 25%; 
 }
 
+/* Logo-icon */
 
 .logo i{
     font-size: 1.8rem;
@@ -36,6 +34,7 @@ header{
     position: relative;
 }
 
+/* Spinning rings */
 
 .logo i::after{    
     content: '';        
@@ -49,6 +48,8 @@ header{
     top: -25%;
     animation: spin 1.7s linear infinite;      
 }
+
+/* Branding */
 
 .logo span{
     font-size: 2rem;
@@ -68,6 +69,7 @@ header{
     flex-wrap: wrap;
 }
 
+/* Right Side Of Tray - User Image & Notification icon */
 .right-tray{
     display: flex;
     justify-content: space-evenly;
@@ -79,7 +81,7 @@ header{
 
 
 .notifications i{
-    display: flex;
+    
     border-radius: 50%;
     color: rgb(80,80,80);
     background-color: cornsilk;
@@ -90,7 +92,7 @@ header{
 }
 
 .user img{
-    display: flex;
+    
     border-radius: 50%;
     color: rgb(80,80,80);
     background-color: cornsilk;    
@@ -140,7 +142,10 @@ header{
     width: 90%;
     height: 2.6rem;
     border-radius: 4rem;
-    transition: all 0.8s ease-in-out;   
+    transition: all 0.8s ease-in-out;  
+    padding-left: 1rem;
+    font-family: 'Baloo 2';
+    font-size: 0.9rem; 
 }
 
 .search-bar:focus{
@@ -168,13 +173,9 @@ header{
     font-size: 1.1rem;
 }
 
-.search input{
-    padding-left: 1rem;
-    font-family: 'Baloo 2';
-    font-size: 0.9rem;
-}
-
 /* --- End Header --- */
+
+
 
 /* Main */
 
@@ -215,18 +216,23 @@ main{
 }
 
 .charts li img{
-    display: flex;
-    height: 6rem;    
+    width: 6rem;    
+    height: auto;
     border-radius: 0.3rem;
 }
 
-.side-carousel-img{
-    height: 10rem !important;    
+#side-carousel-img{
+    width: 10rem;
+    height: auto;
 }
 
- .center-carousel-img{
-    height: 13rem !important;    
+ #center-carousel-img{
+    width: 13rem;
+    height: auto;
 } 
+
+
+/* Play Button */
 
 .mid-btn{
     background-color:transparent;
@@ -262,25 +268,28 @@ main{
     margin-top: 2rem;
     justify-content: space-evenly;
     align-items: center;
-    width: 95%;
-    margin-left: 4rem;
-    background-color:rgb(80,80,80);
-    height:20vh;
     flex-wrap: wrap;
+    margin-left: 4rem;
+    flex-grow: 1;
+    background-color:rgb(80,80,80);
+    height:auto;
+    padding: 1rem;
     border-radius: 3rem;
-
 }
 
 .station-fig{
     position: relative;
     overflow: hidden;
 }
+
 .station-fig img{
     height: 6.2rem;
     width: 6.2rem;
     border-radius: 50%;
     box-shadow: 0px 0px 4px rgb(211,208,203)(43,45,81);
 }
+
+/* Station Name */
 
 .station-fig span{
     position: absolute;
@@ -291,6 +300,8 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/* Black Overlay-Hover Effect*/
 
 .overlay{
     height: 6.2rem;
@@ -321,6 +332,8 @@ main{
     transform: translateY(2%);
 }
 
+
+
 /* Artists */
 .artists{
     display: flex;
@@ -329,7 +342,7 @@ main{
     justify-content: space-evenly;
     width: 95%;
     margin-left: 4rem;
-    height:40vh;
+    padding: 1rem 0;
     flex-wrap: wrap;
     font-family: 'Baloo 2';
 }
@@ -338,7 +351,9 @@ main{
     font-size: 1.5rem;
     font-family: 'Baloo 2';
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
+
 .section-content{
     display: flex;
     flex-direction: row;
@@ -347,35 +362,41 @@ main{
     width: 100%;    
 }
 
+/* Artist Image */
 .artist-fig img{
-    height: 9.5rem;
-    width: 9.5rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 50%;
     box-shadow: 0px 0px 3px cornsilk;
 }
 
 .artist-fig img:hover{
-    
     box-shadow: 0px 0px 8px rgb(211,208,203);
+    transform: scale(1.05) translateY(-3%);
 }
+
 .artist-fig{
     position: relative;
 }
 
+/* Artist Name */
+
 .artist-fig span{
     position: absolute;
     text-align: center;
+    display: inline-block;
     text-shadow: 1px 1px 1px black;
     font-family: 'Baloo Thambi 2';
     top: 115%;
     left: 50%;
     width: 75%;
-    height: 10%;
+    height: auto !important;
     background-color: rgb(80,80,80);
-    padding: 0.5rem;
+    padding: 0 0.3rem;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     transform: translate(-50%,-50%);
+    vertical-align: middle;
 }
 
 
@@ -388,7 +409,8 @@ main{
     justify-content: space-evenly;
     width: 100%;
     margin-left: 4rem;
-    height:50vh;
+    height:auto;
+    padding:2rem;
     flex-wrap: wrap;
 }
 
@@ -404,6 +426,8 @@ main{
     align-items: center;
 }
 
+/* Image on Card */
+
 .song-img{
     height: 8rem;
     width: 8rem;
@@ -417,6 +441,7 @@ main{
     align-items: center;
 }
 
+/* Play Button */
 .song-desc .mid-btn{
     top:35%;
     left:50%;
@@ -430,10 +455,12 @@ main{
     font-weight: 600;
 }
 
+/* Song-Artist */
+
 .song-info{
     font-family: 'Baloo 2';
     font-size: 0.8rem;
-    color: cornsilk;
+    color: rgb(201, 197, 183);
     font-weight: 400;
 }
 
@@ -482,7 +509,8 @@ aside{
     border-radius: 1rem;    
 }
 
-.queue-sno{
+/* Queue Bar Icon */
+.queue-bars-icon{
     font-size: 0.6rem; 
     margin-left: 0.2rem;   
 }
@@ -514,7 +542,54 @@ aside{
     margin: 3rem 0 1rem 0;
     width: 50%;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+/* Dropdown Menu  */
+
+.dropdown{
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    left:75%;
+    top:35%;    
+}
+
+.dropdown-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    opacity: 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(70,70,70);
+    background-color: rgb(130,130,130);
+}
+
+.dropdown-btn{
+    font-size: 1.3rem;
+    padding-left: 1rem;
+}
+.dropdown-list li{
+    width: 100%;
+    border-bottom: 1px solid rgb(70,70,70);
+}
+
+.dropdown:hover .dropdown-btn{
+    transform: translateY(-1%) rotateX(180deg);
+} 
+
+.dropdown:hover .dropdown-list{
+    opacity: 1;
+}
+
+/* Queue Elements */
 
 .queue-ele i{
     display: flex;
@@ -545,12 +620,14 @@ aside{
     align-items: center;
     background-color: rgb(30,30,30);
     width:100%;
-    height: 12vh;
-    margin-top: 3rem;
+    height: auto;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
     
 }
 
-/* Left Side of Player */
+/* Left Side of Player -Song Info*/
 
 .player-song{
     display: flex;
@@ -562,11 +639,11 @@ aside{
 .player-song-img img{
     height:3.2rem;
     width:3.2rem;
-    display: flex;
     border-radius: 0.5rem;
     border: 2px solid rgb(80,80,80);
     align-items: center;
 }
+
 .player-song-info{
     display: flex;
     flex-direction: column;
@@ -617,8 +694,6 @@ aside{
 
 .controller-opt{
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: center;    
 }
 
@@ -628,6 +703,8 @@ aside{
     color: rgb(80,80,80);
     margin: 0 1rem;
 }
+
+
 
 .controller-opt i:hover{
     font-size: 0.9rem;
@@ -653,6 +730,10 @@ aside{
     color: grey;
 }
 
+.hidden-btns{
+    display: none  ;
+}
+
 /* Animations */
 @keyframes spin{
     from{
@@ -662,4 +743,494 @@ aside{
         transform: translate(-10.35%,-6%) rotate(360deg);
     }
 }
+
+/* Media-Queries */
+
+
+/* Mobile S */
+
+@media(min-width: 320px){
+    html{
+        font-size: 12px  ;
+    }
+
+    header{
+        justify-content: space-evenly;
+    }
+
+    .logo{
+        width: 15%;
+    }
+
+    .logo span, .right-tray, .search:hover .search-icon, aside{
+        display: none;
+    }
+    
+    .tray{
+        width: 70%;      
+    } 
+
+    .search-panel{
+        flex-direction: row-reverse;
+    }
+
+    .search:hover{
+        width: 100%;
+    }
+    .search:hover .search-bar{
+        display: inline-block;
+        transform: translateX(10%);
+        padding: 0.1 1rem;
+    }
+
+    main{
+        justify-content: center;
+    }
+
+    .content{
+        width: 90%;
+    }
+
+    .charts, .artists, .new-releases{
+        justify-content: space-evenly;
+        padding-left: 0;
+        margin:auto;
+    }
+
+    .charts li img, #side-carousel-img, #center-carousel-img{
+        width: 12rem ;
+        margin-bottom: 1rem;
+    }
+
+    .stations{
+        margin-left: 0;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .station-fig img , .overlay{
+        height: 5.8rem;
+        width: 5.8rem;
+    }
+
+    .section-title{
+        margin: 2rem auto 1rem auto;
+        font-size: 2rem;
+    }
+
+    .artist-fig{
+        margin: 2rem;
+    }
+
+   .song-info{
+        display: none;
+    }
+
+    .song-card{
+        margin-top: 2rem;
+        width: 12rem;
+        height: 15.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .song-img{
+        height: 11rem;
+        width: 10.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .song-title{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .controller{
+        width: 90%;
+    }
+
+    .player-options{
+        justify-content: space-evenly;
+        flex-grow: 1;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .hidden-btns{
+        display: inline-flex  ;
+    }   
+
+    .hide-s{
+        display: none;
+    }
+}
+
+/* Mobile L */
+
+@media(min-width: 480px){
+
+    html{
+        font-size: 14px  ;
+    }
+
+}
+
+@media(min-width: 560px){
+
+    html{
+        font-size: 16px  ;
+    }
+
+}
+
+@media(min-width: 640px){
+
+    html{
+        font-size: 16px  ;
+    }
+
+    .hide-s{
+        display: unset;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .logo span{
+        display: unset;
+        font-size: 1.6rem;
+    } 
+
+    .charts{
+        justify-content: center;
+    }
+
+    .charts li img{
+        width: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    #side-carousel-img{
+        width: 7rem;
+    }
+
+     #center-carousel-img{
+        width: 9rem ;
+    } 
+
+    .artist-fig img{
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .new-releases{
+        width: 80%;
+    }
+
+    .song-card{
+        margin-top: 2rem;
+        width: 12rem;
+        height: 15rem;
+        border-radius: 0.6rem;
+    }
+
+    .song-img{
+        height: 11rem;
+        width: 10.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .song-title{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .controller{
+        width: 65%;
+    }
+
+    .player-song{
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .player-options{
+        justify-content: flex-end;
+        width: 50%;
+        flex-grow: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 15%;    
+    }
+
+    .player-song-img img{
+        position: absolute;
+        height: 4.5rem;
+        width: 4.5rem;
+        top: 50%;
+        transform: translate(50%,-50%);
+    }
+    
+    .hide-m{
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+    .hide-m{
+        display: unset;
+    }
+
+    .right-tray{
+        display:flex;
+    }
+
+    .search:hover .search-bar{
+        transform: translateX(5%);
+    }
+
+    .logo span{
+        font-size: 2rem;
+    }
+
+    .charts li img{
+        width: 6.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #side-carousel-img{
+        width: 8.5rem;
+    }
+
+     #center-carousel-img{
+        width: 10.5rem ;
+    } 
+
+    .section-content{
+        justify-content: center;
+    }
+
+    .artists{
+        width: 95%;
+    }
+
+    .artist-fig{   
+        margin: 0.5rem;
+        flex-grow: 1;
+    }
+
+    .artist-fig img{
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .artist-fig span{
+        font-size: 1rem;
+        transform: translateX(-60%);
+    }
+
+    .new-releases{
+        padding: 0;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .section-content{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .song-card{
+        display: flex;
+        margin-top: 2rem;
+        width: 7.5rem;
+        height: 11.5rem;
+        border-radius: 0.6rem;
+        flex-grow: 1;
+        margin-right: 1rem;
+    }
+
+    .song-info{
+        display: unset;
+    }
+
+    .song-img{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 0.6rem;
+    }
+
+    .song-title{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .player{
+        flex-direction: row;
+    }
+
+    .player-song{
+        display: flex;
+        flex-direction: row;
+        width: 30%;        
+        flex-wrap: nowrap;
+    }
+
+    .player-song-info{
+        display: flex;
+    }
+
+    .player-song-info-artist, .player-song-info-name{
+        display: unset;
+    }
+
+    .player-song-img img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+
+    .controller{
+        width: 35%;
+        flex-direction: column;
+    }
+
+    .controller-opt{
+        text-align: center;
+    }
+    .player-options{
+        width: 20%;
+        margin: 0;
+    }
+
+    .hidden-btns{
+        display: none !important;
+    }
+
+    .hide-l{
+        display: none;
+    }
+    
+}
+
+
+@media(min-width:920px){
+    
+    html{
+        font-size: 18px;
+    }
+    .hide-l{
+        display: unset;
+    } 
+
+}
+
+/* Desktop */
+
+@media(min-width:1024px){
+
+    .hide-l{
+        display: unset;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    aside{
+        display: flex;
+        width: 27%;
+    }
+
+    .content{
+        width: 65%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .queue-ele{
+        width: 100%;
+    }
+
+    .controller{
+        width: 50%;
+    }
+
+    .player-song{
+        width: 20%;
+    }
+
+    .player-options{
+        width: 20%;
+    }
+
+    .artist-fig img{
+        height: 7.8rem;
+        width: 7.8rem;
+    }
+
+}
+
+
+@media(min-width: 1280px){
+    html{
+        font-size: 16px;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+    .logo{
+        width: 30%;
+    }
+    .right-tray{
+        width: 20%;
+        margin-right: 2.5rem;
+    }
+    .tray{
+        width:50%;
+        justify-content: flex-end;
+    }
+    aside{
+        margin-left: 1rem;
+    }
+    .queue-ele{
+        width: 95%;
+    }
+    .charts{
+        margin-top: 3rem;
+    }
+
+    .charts li img{
+        width: 7.5rem;
+    }
+
+
+    #side-carousel-img{
+        width: 9.5rem;
+    }
+     #center-carousel-img{
+        width: 11.5em ;
+    } 
+    
+    .song-card{
+        width:8rem;
+        height: 12.6rem;
+    }
+
+    .song-img{
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .queue-song-info{
+        font-size: 1.1rem;
+    }
+
+}
+
 
