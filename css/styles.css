@@ -905,6 +905,10 @@ aside{
     html{
         font-size: 14px  ;
     }
+    .artist-fig img{
+        height: 11rem;
+        width: 11rem;
+    }
 
 }
 
