@@ -894,11 +894,16 @@ aside{
 }
 
 /* Mobile L */
+@media(min-width: 375px){
+    html{
+        font-size: 11px  ;
+    }
+}
 
 @media(min-width: 425px){
 
     html{
-        font-size: 13px  ;
+        font-size: 14px  ;
     }
 
 }
