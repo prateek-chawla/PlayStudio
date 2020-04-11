@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/screen2.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Thambi+2&family=Poppins&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script src="./static/8a7f28c1ad.js.download" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./static/img/favicon.ico" />
+
+    <title>PlayStudio</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <i class="fas fa-play"></i>
+            <span>
+                PlayStudio
+            </span>
+        </div>
+
+        <!-- Notification Tray -->
+        <div class="tray">
+            <!-- Search Bar -->
+            <div class="search-panel">
+                <form class="search" action="#" class="search">
+                    <input spellcheck="false" autocomplete="off" class="search-bar" type="text" name="search"
+                        id="search" spellcheck="false" placeholder="      Search..." />
+                    <i class="search-icon fas fa-search"></i>
+                </form>
+            </div>
+
+            <!-- Right Side Of Tray - User Image & Notification icon  -->
+            <div class="right-tray">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                </div>
+
+                <div class="user">
+                    <img src="./static/img/user.png" alt="User-Image" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div class="screen2">
+        
+        <!-- Artist Cards -->
+        <div class="screen2-left">
+
+            <!-- Main Artist Card -->
+            <section class="card-container">
+                    <div class="card">
+
+                        <!-- Artist Image -->
+                        <div class="card-img">
+                            <img src="./static/img/artists/eminem-recolor.jpg" alt="Eminem" />
+                        </div>
+
+                        <!-- Artist Info -->
+                        <div class="card-content">
+                            <span>Eminem</span>
+                            <div class="card-desc hide-s2-s   ">
+                                Marshall Bruce Mathers III, known professionally as Eminem is an
+                                American rapper, songwriter, record producer, record executive and
+                                actor. In addition to his solo career, Eminem was a member of the
+                                hip hop group D12.
+                            </div>
+                            <div class="card-followers">
+                                22345 Followers
+                            </div>
+                        </div>
+
+                        <!-- Hidden Button - Visible on Hover -->
+                        <div class="card-btn">Start Radio</div>
+                    </div>
+            </section>
+
+            <!-- Similar Artists -->
+            <section class="similar-artists">
+
+                    <div class="sa-card" style="background-color: rgb(24,24,26);">
+                        <img src="./static/img/artists/dr dre.jpg" alt="">
+                        <span class="sa-title">Dr Dre</span>
+                    </div>
+
+                    <div class="sa-card" style="background-color: rgb(22,31,36);">
+                        <img src="./static/img/artists/jay z.jpg" alt="">
+                        <span class="sa-title">Jay Z</span>
+                    </div>
+
+                    <div class="sa-card hide-s2-s  " style="background-color: rgb(68,62,46);">
+                        <img src="./static/img/artists/the weeknd.jpg" alt="">
+                        <span class="sa-title">The Weeknd</span>
+                    </div>
+
+                    <div class="sa-card" style="background-color: rgb(34,40,60);">
+                        <span class="sa-title">Similar <br>Artists</span>
+                    </div>
+
+            </section>
+
+        </div>
+
+        <!-- Albums Side Pane -->
+        <aside>
+            <!-- Queue Header + Dropdown Menu -->
+            <div class="queue-header">
+                Albums
+                <!-- Dropdown Menu    -->
+                <div class="dropdown">
+                    <i class="dropdown-btn fas fa-caret-down"></i>
+                    <ul class="dropdown-list">
+                        <li>Play All</li>
+                        <li>Shuffle</li>
+                        <li>Repeat</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Queue List -->
+            <div class="queue">
+                <div class="queue-ele">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/mtmb.png">
+                        </div>
+                        <span class="song-name">
+                            Music To Be Murdered By
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/kamikaze.jpg">
+                        </div>
+                        <span class="song-name">
+                            Kamikaze
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/revival.png">
+                        </div>
+                        <span class="song-name">
+                            Revival
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/mmlp2.png">
+                        </div>
+                        <span class="song-name">
+                            The Marshall Mathers LP 2
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/recovery.jpg">
+                        </div>
+                        <span class="song-name">
+                            Recovery
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s   ">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/relapse.jpg">
+                        </div>
+                        <span class="song-name">
+                            Relapse
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s hide-s2-m">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/encore.jpg">
+                        </div>
+                        <span class="song-name">
+                            Encore
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s hide-s2-m">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/es.jpg">
+                        </div>
+                        <span class="song-name">
+                            The Eminem Show
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s hide-s2-m">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/mmlp.jpg">
+                        </div>
+                        <span class="song-name">
+                            The Marshall Mathers LP
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s hide-s2-m">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/sslp.jpg">
+                        </div>
+                        <span class="song-name">
+                            The Slim Shady LP
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+    
+                <div class="queue-ele hide-s2-s   ">
+                    <div class="queue-song-info">
+                        <span class="queue-bars-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <div class="queue-img">
+                            <img src="./static/img/albums/eminem/infinite.png">
+                        </div>
+                        <span class="song-name">
+                            Infinite
+                        </span>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+        </aside>
+
+    </div>      
+    
+
+    <!-- Music Player -->
+
+    <section class="player">
+        <!-- Song info -->
+        <div class="hide-s player-song">
+            <div class="player-song-img">
+                <img src="./static/img/albums/iron man.jpg" alt="" />
+            </div>
+            <div class="hide-m player-song-info">
+                <div class="player-song-info-name">
+                    Iron Man
+                </div>
+                <div class="player-song-info-artist">
+                    Black Sabbath
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="controller">
+            <div class="progress-bar">
+                <div class="color-progress-bar"></div>
+            </div>
+            <div class="hide-s hide-m controller-opt">
+                <i class="fas fa-angle-left"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-angle-right"></i>
+            </div>
+        </div>
+
+        <!-- Shuffle Repeat Buttons -->
+        <div class="player-options">
+            <i class="hidden-btns fas fa-angle-left"></i>
+            <i class="hidden-btns fas fa-play"></i>
+            <i class="hidden-btns fas fa-angle-right"></i>
+            <i class="fas fa-random"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-sliders-h"></i>
+        </div>
+    </section>
+</body>
+
+</html>

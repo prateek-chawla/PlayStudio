@@ -1,0 +1,360 @@
+/* Screen Container */
+.screen2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Artist Cards */
+.screen2-left{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+}
+
+/* Main Artist Card */
+.card-container{
+    margin-top: 2rem;
+}
+
+.card{
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    position: relative;
+    background-color: rgb(29,29,29);
+    border: 2px solid rgb(90,90,90);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 12px 2px rgb(63, 62, 62);
+    box-shadow: -1rem 0.3rem 3rem  black;
+}
+
+/* Overlay */
+.card:after{
+    content: '';
+    position: absolute;
+    left: -20%;
+    top: -55%;
+    width: 65rem;
+    height: 65rem;
+    transform-origin: top left;
+    background-color: rgb(80,80,80);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.7s ease-out;
+}
+
+/* Artist Image */
+.card-img{
+    width: 50%;   
+}
+
+.card-img img{
+    width: 100%;
+    height:auto;
+    vertical-align: middle;
+}
+
+/* Artist Info */
+.card-content{
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    font-family: 'Baloo 2';
+    color: lightgrey;
+}
+
+.card-desc{
+    width: 86%;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins';
+    color: lightgrey;
+    font-size: 0.7rem;
+}
+
+.card-content span{
+    font-size: 3rem;
+    font-family: 'Baloo Thambi 2';
+}
+
+.card-followers{
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid lightgrey;
+    padding: 0.3rem 0.75rem;
+    color: lightgrey;
+    border-radius: 2rem;
+    transition: all 0.4s ease;
+}
+
+/* Start Radio Button - Show on Hover */
+.card-btn{
+    background-color: transparent;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Baloo Thambi 2';    
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.card:hover .card-btn{
+    opacity: 1;    
+}
+
+.card:hover:after{
+    transform: scale(1);
+}
+
+.card-btn:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: rgb(20,120,120);
+    cursor: default;
+    border-radius: 1rem;
+    letter-spacing: 2.5px;
+}
+
+/* End Section */
+
+/* Similar Artists Section */
+
+.similar-artists{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto;
+    position: relative
+}
+
+/* Cards */
+.sa-card{
+    display: flex;
+    flex-direction: column;
+    width: 12.5rem;
+    height: 17.5rem;
+    transition:all 0.4s ease-in-out;
+    position: relative;
+    box-shadow: -1rem 0.3rem 3rem 0.5rem black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.sa-card:not(:first-child){
+    margin-left: -2.5rem;
+}
+
+/* Artist Image */
+.sa-card img{
+    width: 10rem;
+    height: auto;
+    margin: auto;
+}
+
+.sa-title{
+    margin: auto; 
+    font-size: 1.5rem;
+    font-family: 'Baloo Thambi 2';   
+}
+
+.sa-card:hover{
+    transform: translateY(-1.5rem);    
+}
+
+.sa-card:hover ~ .sa-card{ 
+    transform: translateX(17%);
+}
+
+/* Albums Side Pane */
+aside{
+    width: 27%;
+    margin-right: 3rem;
+}
+
+
+
+
+/* Media-Queries */
+
+
+/* Mobile S */
+
+@media(min-width: 320px){
+
+    html{
+        font-size: 10px  ;
+    }
+
+    .screen2-left{
+        width: 80%;
+    }
+
+    .hide-s2-s{
+        display: none;
+    }
+
+    .card:after{
+        left: -60%;
+    }
+
+    .sa-card{
+        width: 9.5rem;
+        height: 15rem;
+    }
+
+    aside{
+        display: flex;
+        width: 70%;
+        margin: -6rem auto 10rem auto;
+    }
+
+    .queue-ele{
+        width: 100%;
+    }
+
+}
+
+
+/* Mobile L */
+@media(min-width: 425px){
+
+    html{
+        font-size: 14px  ;
+    }
+
+    .sa-card{
+        width: 10rem;
+        height: 14rem;
+    }
+
+
+}
+
+/* Mobile Orientation */
+
+@media(min-width: 560px){
+
+    html{
+        font-size: 16px  ;
+    }
+
+    .sa-card{
+        width: 12rem;
+        height: 16rem;
+    }
+
+    .queue-ele .song-name {
+        font-size: 1.25rem;
+    }
+
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+    .hide-s2-s{
+        display: flex;
+    }
+
+    .card:after{
+        left: -40%;
+        top: -100%;
+    }
+
+    .hide-s2-m{
+        display: none;
+    }
+
+    .queue-ele .song-name {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media(min-width:920px){
+    
+    html{
+        font-size: 18px;
+    }
+
+    .card:after{
+        left: -20%;
+        top: -55%;
+    }
+
+    .sa-card{
+        width: 13rem;
+        height: 17.5rem;
+    }
+
+
+}
+
+/* Desktop */
+
+@media(min-width:1024px){
+
+    html{
+        font-size: 14px;
+    }
+
+    .hide-s2-m{
+        display: flex;
+    }
+
+    .screen2{
+        justify-content: space-evenly;
+    }
+
+    .screen2-left{
+        width: 55%;
+    }
+
+    aside{
+        display: flex;
+        width: 27%;
+        margin: 1.5rem auto 10rem auto;
+    }
+
+    .queue-ele .song-name {
+        font-size: 1.1rem;
+        width: 60%;
+    }
+}
+
+@media(min-width: 1280px){
+    html{
+        font-size: 16px;
+    }
+
+    .card:after{
+        left: -20%;
+        top: -55%;
+    }
+
+    .sa-card{
+        width: 13rem;
+        height: 17.5rem;
+    }
+
+}
+
+
+
+
+
