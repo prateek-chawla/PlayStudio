@@ -28,15 +28,17 @@ header{
 
 /* Logo-icon */
 
-.logo i{
+.logo-icon{
     font-size: 1.8rem;
     display: flex;
     position: relative;
+    text-decoration: none;
+    color: cornsilk;
 }
 
 /* Spinning rings */
 
-.logo i::after{    
+.logo-icon::after{    
     content: '';        
     position:absolute;   
     border: 0.2rem solid;   
@@ -410,7 +412,7 @@ main{
 .new-releases{
     display: flex;
     margin-top: 2rem;
-    margin-bottom: 8rem !important;
+    margin-bottom: 11rem !important;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
